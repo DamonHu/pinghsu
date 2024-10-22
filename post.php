@@ -10,8 +10,8 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于<?php $this->date('Y年m月d日'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></a>
-				<?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于<?php $this->date('Y年m月d日'); ?></time> in <?php $this->category(''); ?> with <a href="#comments" style="background: #4CAF50;padding: 2px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></a>
+				<a href="#comments" style="background: #FF5722;padding: 2px 10px; border-radius: 20px; color: #fff; margin-right: 5px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -48,8 +48,8 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于<?php $this->date('Y年m月d日'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></a>
-				<?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于<?php $this->date('Y年m月d日'); ?></time> in <?php $this->category(''); ?> with <a href="#comments" style="background: #4CAF50;padding: 2px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></a>
+				<a href="#comments" style="background: #FF5722;padding: 2px 10px; border-radius: 20px; color: #fff; margin-right: 5px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
