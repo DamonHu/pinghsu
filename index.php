@@ -20,18 +20,40 @@ $this->need('header.php');
 			<div class="post-list-item">
 				<div class="post-list-item-container">
 					<?php if (isset($this->___fields()['thumb'])): ?>
-					<div class="item-thumb <?php if ($this->options->colorBgPosts == 'defaultColor'): ?> bg-deepgrey<?php elseif ($this->options->colorBgPosts == 'customColor'): ?><?php if (isset($this->___fields()['green'])): ?> bg-green<?php elseif (isset($this->___fields()['red'])): ?> bg-red<?php elseif (isset($this->___fields()['yellow'])): ?> bg-yellow<?php elseif (isset($this->___fields()['blue'])): ?> bg-blue<?php elseif (isset($this->___fields()['purple'])): ?> bg-purple<?php else : ?> bg-<?php echo randBgColor(); ?><?php endif; ?><?php endif; ?>" style="background-image:url(<?php parseFieldsThumb($this);?>);"></div>
+					<div class="item-thumb <?php if ($this->options->colorBgPosts == 'defaultColor'): ?> bg-deepgrey<?php elseif ($this->options->colorBgPosts == 'customColor'): ?><?php if (isset($this->___fields()['green'])): ?> bg-green<?php elseif (isset($this->___fields()['red'])): ?> bg-red<?php elseif (isset($this->___fields()['yellow'])): ?> bg-yellow<?php elseif (isset($this->___fields()['blue'])): ?> bg-blue<?php elseif (isset($this->___fields()['purple'])): ?> bg-purple<?php else : ?> bg-<?php echo randBgColor(); ?><?php endif; ?><?php endif; ?>" style="background-image:url(<?php parseFieldsThumb($this);?>);">
+						<div style="position: absolute; top: 13px; left: 13px; display: flex; align-items: center;">
+					<div style="background: #4CAF50;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;    font-size: 12px;"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></div> 
+					<?php if (ViewsCounter_Plugin::getViews() > 100): ?>
+						<div style="background: #FF5722;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;     font-size: 12px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</div>
+					<?php else : ?>
+						<div style="background: #4CAF50;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;     font-size: 12px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</div>
+					<?php endif; ?>
+				</div>
+					</div>
             <?php else : ?>
             <?php $thumb = showThumb($this,null,true);?>
             <?php if(!empty($thumb)):?>
             <div class="item-thumb <?php if ($this->options->colorBgPosts == 'defaultColor'): ?> bg-deepgrey<?php elseif ($this->options->colorBgPosts == 'customColor'): ?><?php if (isset($this->___fields()['green'])): ?> bg-green<?php elseif (isset($this->___fields()['red'])): ?> bg-red<?php elseif (isset($this->___fields()['yellow'])): ?> bg-yellow<?php elseif (isset($this->___fields()['blue'])): ?> bg-blue<?php elseif (isset($this->___fields()['purple'])): ?> bg-purple<?php else : ?> bg-<?php echo randBgColor(); ?><?php endif; ?><?php endif; ?>" style="background-image:url(<?php echo $thumb;?>);">
 				<div style="position: absolute; top: 13px; left: 13px; display: flex; align-items: center;">
 					<div style="background: #4CAF50;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;    font-size: 12px;"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></div> 
-					<div style="background: #FF5722;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;     font-size: 12px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</div>
+					<?php if (ViewsCounter_Plugin::getViews() > 100): ?>
+						<div style="background: #FF5722;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;     font-size: 12px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</div>
+					<?php else : ?>
+						<div style="background: #4CAF50;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;     font-size: 12px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</div>
+					<?php endif; ?>
 				</div>
 			</div>
         	<?php else : ?>
-            <div class="item-thumb <?php if ($this->options->colorBgPosts == 'defaultColor'): ?> bg-deepgrey<?php elseif ($this->options->colorBgPosts == 'customColor'): ?><?php if (isset($this->___fields()['green'])): ?> bg-green<?php elseif (isset($this->___fields()['red'])): ?> bg-red<?php elseif (isset($this->___fields()['yellow'])): ?> bg-yellow<?php elseif (isset($this->___fields()['blue'])): ?> bg-blue<?php elseif (isset($this->___fields()['purple'])): ?> bg-purple<?php else : ?> bg-<?php echo randBgColor(); ?><?php endif; ?><?php endif; ?>" style="background-image:url(<?php $this->options->themeUrl('images/thumbs/'.mt_rand(0,9).'.jpg'); ?>);"></div>
+            <div class="item-thumb <?php if ($this->options->colorBgPosts == 'defaultColor'): ?> bg-deepgrey<?php elseif ($this->options->colorBgPosts == 'customColor'): ?><?php if (isset($this->___fields()['green'])): ?> bg-green<?php elseif (isset($this->___fields()['red'])): ?> bg-red<?php elseif (isset($this->___fields()['yellow'])): ?> bg-yellow<?php elseif (isset($this->___fields()['blue'])): ?> bg-blue<?php elseif (isset($this->___fields()['purple'])): ?> bg-purple<?php else : ?> bg-<?php echo randBgColor(); ?><?php endif; ?><?php endif; ?>" style="background-image:url(<?php $this->options->themeUrl('images/thumbs/'.mt_rand(0,9).'.jpg'); ?>);">
+				<div style="position: absolute; top: 13px; left: 13px; display: flex; align-items: center;">
+					<div style="background: #4CAF50;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;    font-size: 12px;"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></div> 
+					<?php if (ViewsCounter_Plugin::getViews() > 100): ?>
+						<div style="background: #FF5722;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;     font-size: 12px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</div>
+					<?php else : ?>
+						<div style="background: #4CAF50;padding: 1px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;     font-size: 12px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</div>
+					<?php endif; ?>
+				</div>
+			</div>
             <?php endif; ?>
 					<?php endif; ?>
 					<a href="<?php $this->permalink() ?>">
