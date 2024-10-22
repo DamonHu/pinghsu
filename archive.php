@@ -5,11 +5,11 @@
     <div class="common-item">
         <div class="common-title">
             <?php $this->archiveTitle(array(
-		        'category'  =>  _t('Category : %s'),
-		        'search'    =>  _t('Search : %s'),
-		        'tag'       =>  _t('Tag : %s'),
-		        'author'    =>  _t('Author : %s'),
-		        'date'      =>  _t('Date : %s')
+		        'category'  =>  _t('分类 : %s'),
+		        'search'    =>  _t('搜索 : %s'),
+		        'tag'       =>  _t('标签 : %s'),
+		        'author'    =>  _t('作者 : %s'),
+		        'date'      =>  _t('日期 : %s')
 		    ), '', ''); ?>
         </div>
         <div class="post-lists">
