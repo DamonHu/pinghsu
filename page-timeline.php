@@ -24,7 +24,7 @@ $this->need('header.php');
 			 $year = $year_tmp;
 			 $output .= '<a href="'.$this->options->siteUrl.''.date('Y',$archives->created).'"><div class="categories-title">'.date('Y',$archives->created).'</div></a><div class="post-lists"><div class="post-lists-body">';
         }
-        $output .= '<div class="post-list-item"><div class="post-list-item-container"><div class="item-label"><div class="item-title"><a href="'.$archives->permalink .'">'. $archives->title .'</a></div><div class="item-meta clearfix"><div class="item-meta-date"> '.date('M j, Y',$archives->created).' </div></div></div></div></div>';
+        $output .= '<div class="post-list-item"><div class="post-list-item-container"><div class="item-label"><div class="item-title"><a href="'.$archives->permalink .'">'. $archives->title .'</a></div><div class="item-meta clearfix"><div class="item-meta-date"> '.date('Y年m月d日',$archives->created).' </div></div></div></div></div>';
     }
     $output .= '</div></div></div>';
     echo $output;
