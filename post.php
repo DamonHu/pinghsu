@@ -10,7 +10,8 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于<?php $this->date('Y年m月d日'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></a>
+				<?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -29,7 +30,8 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于<?php $this->date('Y年m月d日'); ?></time> in <?php $this->category(''); ?> with <a href="#comments" style="background: #4CAF50;padding: 2px 10px; border-radius: 20px; color: #fff;  margin-left: 5px; margin-right: 5px;"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></a>
+				<a href="#comments" style="background: #FF5722;padding: 2px 10px; border-radius: 20px; color: #fff; margin-right: 5px;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</a>
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -46,7 +48,8 @@
 				<?php $this->title() ?>
 			</div>
 			<div class="post-header-thumb-meta">
-				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+				<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于<?php $this->date('Y年m月d日'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></a>
+				<?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览
 			</div>
 			<div class="post-tags">
 				<?php $this->tags(' ', true, ''); ?>
@@ -62,7 +65,11 @@
 			<?php $this->title() ?>
 		</div>
 		<div class="post-data">
-			<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">Published on <?php $this->date('M j, Y'); ?></time> in <?php $this->category(''); ?> with <a href="#comments"><?php $this->commentsNum(_t(' 0 comment'), _t(' 1 comment'), _t(' %d comments')); ?></a>
+			<time datetime="<?php $this->date('c'); ?>" itemprop="datePublished">发布于<?php $this->date('Y年m月d日'); ?></time> in <?php $this->category(''); ?>
+		</div>
+		<div class="post-data" style="margin-top: 5px;">
+			<a href="#comments" style="background: #4CAF50;padding: 2px 10px; border-radius: 20px; color: #fff; margin-right: 10px;"><?php $this->commentsNum(_t('暂无评论'), _t('1 条评论'), _t('%d 条评论')); ?></a>
+			<a href="#comments" style="background: #FF5722; padding: 2px 10px; border-radius: 20px; color: #fff;"><?php echo ViewsCounter_Plugin::getViews(); ?> 次浏览</a>
 		</div>
 	</div>
 	<div id="post-content" class="post-content" itemprop="articleBody">
@@ -70,8 +77,8 @@
             <?php $this->tags(' ', true, ''); ?>
         </p>
 		<?php parseContent($this); ?>
-		<p class="post-info">
-			本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可。<br>本站文章除注明转载/出处外，均为本站原创或翻译，转载前请务必署名。
+		<p class="post-info" style="white-space: normal; word-break: break-all; background: #edf0f3; border: none; border-radius: 20px;">
+			本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可。转载前请务必署名。
 		</p>
 	</div>
 </article>
