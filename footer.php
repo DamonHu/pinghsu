@@ -41,11 +41,11 @@
                 </div>
             </div>
             <div class="meta-item meta-posts">
-                <h3 class="meta-title">RECENT POSTS</h3>
+                <h3 class="meta-title" style="font-weight: bold; color: #ec565b; font-size: 16px;">最新发布</h3>
                 <?php getRecentPosts($this,8); ?>
             </div>
             <div class="meta-item meta-tags">
-                <h3 class="meta-title">HOT TAGS</h3>
+                <h3 class="meta-title" style="font-weight: bold; color: #4CAF50; font-size: 16px;">热门标签</h3>
                 <?php getHotTags($this,20); ?>
         </div>
     </div>
