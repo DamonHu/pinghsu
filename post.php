@@ -77,8 +77,8 @@
             <?php $this->tags(' ', true, ''); ?>
         </p>
 		<?php parseContent($this); ?>
-		<p class="post-info" style="white-space: normal; word-break: break-all; background: #edf0f3; border: none; border-radius: 20px;">
-			本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可。转载前请务必署名。
+		<p class="post-info" style="white-space: normal; word-break: break-all; background: #edf0f3; border: none; border-radius: 20px; margin: 0 0 30px 0; font-size: 14px; font-weight: bold; color: #24333e;">
+			本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可。<span style="color: #c62828;">转载或大段使用必须添加本文链接，否则您将构成侵权!</span>
 		</p>
 	</div>
 </article>
