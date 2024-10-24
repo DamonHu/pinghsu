@@ -80,6 +80,11 @@
 		<p class="post-info" style="white-space: normal; word-break: break-all; background: #edf0f3; border: none; border-radius: 20px; margin: 0 0 30px 0; font-size: 14px; font-weight: bold; color: #24333e;">
 			本文由 <a href="<?php $this->author->permalink(); ?>"><?php $this->author() ?></a> 创作，采用 <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="external nofollow">知识共享署名4.0</a> 国际许可协议进行许可。<span style="color: #c62828;">转载或大段使用必须添加本文链接，否则您将构成侵权!</span>
 		</p>
+		<hr/>
+		<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; margin-top: 20px; margin-bottom: 30px;">
+			<p style="font-size: 16px; color: #333333; margin: 0; font-weight: bold;">我的微信公众号，求关注~</p>
+			<img src="https://naiba.org/wechat.jpg" style="width: 140px; height: 140px;"/>
+		</div>
 	</div>
 </article>
 
